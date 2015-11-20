@@ -59,6 +59,10 @@ body{
     overflow-y: hidden;
     background-color: black;
     background-image: url(../img/bamboobg.png);
+    background-height: 100%;
+
+
+    
 }
 .pointh{
     position: fixed;
@@ -76,9 +80,11 @@ body{
 }
 
 .bgpic{
-    background-repeat: repeat-y;
     position: absolute;
     z-index: -1;
+    height:100%;
+
+
 }
 
 .point{
