@@ -58,6 +58,7 @@ textarea {
 body{
     overflow-y: hidden;
     background-color: black;
+    background-image: url(../img/bamboobg.png);
 }
 .pointh{
     position: fixed;
