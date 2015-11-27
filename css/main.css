@@ -60,10 +60,8 @@ body{
     background-color: black;
     background-image: url(../img/bamboobg.png);
     background-height: 100%;
-
-
-    
 }
+
 .pointh{
     position: fixed;
     top: 0;
@@ -71,6 +69,7 @@ body{
     float: right;
     color: white;
 }
+
 .livesh{
     position: fixed;
     top: 10;
@@ -82,19 +81,19 @@ body{
 .bgpic{
     position: absolute;
     z-index: -1;
-    height:100%;
-
-
+    height: 100%;
 }
 
 .point{
     position: absolute;
-
+    margin: auto;
+    bottom: 250px;
 }
 
 .panda{
     position: absolute;
     bottom: 0;
+
 }
 
 
