@@ -78,35 +78,23 @@ body{
     color: white;
 }
 
-.bgpic{
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-}
-
 .point{
     position: absolute;
     margin: auto;
     bottom: 250px;
+    right: 0px;
 }
 
 .panda{
     position: absolute;
     bottom: 0;
-
 }
-
 
 .leopard{
     position: absolute;
     bottom: 0;
     right: 0;
 }
-
-
-
-
-
 
 
 
