@@ -96,6 +96,10 @@ body{
     right: 0;
 }
 
+.stop{
+    margin: auto;
+    display: none;
+}
 
 
 
