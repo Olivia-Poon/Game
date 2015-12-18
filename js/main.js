@@ -92,7 +92,7 @@ var scroller = function() {
 	posX -= speed;
 	$('body').css('background-position', posX+'px 0');
 
-	$('.leopard').delay(random).animate({right: "+=2000"}, 3000).fadeOut(500,0).animate({right: "0"}, 500).fadeIn(500,0);
+	$('.leopard').delay(random).animate({right: "+=2000"}, 2500).fadeOut(500,0).animate({right: "0"}, 500).fadeIn(500,0);
 	
 	if ($('.leopard').position().left <= 250 && $('.panda').position().top < 680) {
          // Panda jump      
