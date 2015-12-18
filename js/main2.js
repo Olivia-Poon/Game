@@ -71,70 +71,55 @@
 var posX = 0;
 var speed = 3;
 
-var interval1, interval2;
-
-//generates random number between 7-9 seconds
-var random= Math.floor((Math.random() *7000) +2000); 
-
 var counter =0;
 
-// Increment Point counter
 var point = function() {
     counter++;
     if (counter >= 0) {
-      span = document.getElementById("count");
-      span.innerHTML = counter;
     }
 }
 
-// Leopard ia running towards Panda
 var scroller = function() {
 	posX -= speed;
 	$('body').css('background-position', posX+'px 0');
 
-	$('.leopard').delay(random).animate({right: "+=2000"}, 3000).fadeOut(500,0).animate({right: "0"}, 500).fadeIn(500,0);
+	$('.leopard').delay(random).animate({right: "+=3000"}, 2500).fadeOut(500,0).animate({right: "-=3000"}, 500).fadeIn(500,0)
 	
-	if ($('.leopard').position().left <= 250 && $('.panda').position().top < 680) {
-         // Panda jump      
+	if (($('.leopard').position().left <= 600 && $('.panda').position().top < 682) || ($('.leopard').position().left >=0 && $('.panda').position().top <682) ){
+     
 	}
-	else if ($('.leopard').position().left <= 250 && $('.panda').position().left == 0) {
-               stopGame();      // Panda got hit
-	}
-
-}
-
-
-// Start Game
-var startGame = function() {
-	interval1 = setInterval(scroller, 5);
-}
-
-// Stop Game
-var stopGame = function() {
+	else if ($('.leopard').position().left <= 0 && $('.panda').position().left == 0){
 		clearInterval(interval1);
-
-		// Stop Point Count
 		clearInterval(interval2);
 
+		//$('.panda').fadeOut('fast');
+		//$('.leopard').fadeOut('fast');
+		//$('.leopard').stop();
 		$('.leopard').stop(true, true).fadeOut('fast');
+		//$('.leopard').css("display", "none");
 		$('.panda').css("display", "none");
 		$('.stop').show();
+	}
+
 }
 
-// Start Game when document is ready
-$(document).ready(function() {
-	$('.instruct').delay(2000);
-	$('.instruct').fadeOut('slow'); 
+//generates random number between 1-5 seconds
+var random= Math.floor((Math.random() *5000) +1000); 
+
+$(document).ready(function() {          
+	//window.alert("How to Play: Collect the bamboo to earn points! If the leopard touches you gameover! Click anywhere on the window to get the Panda to jump to avoid the leopard. Try to get as many points as you can");          
+	$('body').delay('5000');
+	$('h1').fadeOut('slow'); 
+	setInterval(scroller,5);
+
 
 	//makes panda jump on click
 	$(window).on('click', function(){
-		$('.panda').animate({bottom: "+=250"}, 500).animate({bottom: "-=250"}, 500);
+		$('.panda').animate({bottom: "+=250"}, 500).animate({bottom: "-=250"}, 500)
 	})
 
- 	interval2 = setInterval(point, 1000);
-    startGame();
+	
 
 });
-
 
 

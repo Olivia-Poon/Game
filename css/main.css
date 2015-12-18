@@ -62,29 +62,6 @@ body{
     background-height: 100%;
 }
 
-.pointh{
-    position: fixed;
-    top: 0;
-    right: 0;
-    float: right;
-    color: white;
-}
-
-.livesh{
-    position: fixed;
-    top: 10;
-    right: 0;
-    float: right;
-    color: white;
-}
-
-.point{
-    position: absolute;
-    margin: auto;
-    bottom: 250px;
-    right: 0px;
-}
-
 .panda{
     position: absolute;
     bottom: 0;
@@ -97,9 +74,31 @@ body{
 }
 
 .stop{
+    color: white;
     margin: auto;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 400px;
     display: none;
 }
+
+.point{
+    position: fixed;
+    color: white;
+    text-align: right;
+    top: 0;
+    right: 0;
+}
+
+.instruct{
+    position: fixed;
+    color: white;
+    text-align: center;
+    top: 200px;
+    background-color: black;
+}
+
+
 
 
 
